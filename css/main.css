@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+.text-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #052406;
+}
+.text-box:nth-child(2){
+    background: #19a51e;
+    clip-path: circle(100px at center);
+}
+.text-box h2{
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 120px;
+    color: #ffffff;
+    animation: Scrolling 10s linear infinite;
+}
+.text-box:nth-child(2) h2{
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    color: transparent;
+}
+@keyframes Scrolling{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
